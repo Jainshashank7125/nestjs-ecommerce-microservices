@@ -1,0 +1,24 @@
+{
+  "name": "nestjs-ecommerce-microservices",
+  "version": "1.0.0",
+  "description": "Full-stack e-commerce microservices architecture with NestJS backend and Next.js frontend",
+  "private": true,
+  "scripts": {
+    "start:services": "concurrently \"npm run start:dev --prefix product-service\" \"npm run start:dev --prefix order-service\"",
+    "start:all": "concurrently \"npm run start:dev --prefix product-service\" \"npm run start:dev --prefix order-service\" \"npm run dev --prefix client\"",
+    "build:services": "npm run build --prefix product-service && npm run build --prefix order-service",
+    "test:services": "npm run test --prefix product-service && npm run test --prefix order-service"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "nestjs",
+    "microservices",
+    "ecommerce",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

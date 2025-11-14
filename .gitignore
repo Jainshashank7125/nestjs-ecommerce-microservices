@@ -34,6 +34,9 @@ Thumbs.db
 *.sqlite
 *.db
 
+# Logs
+logs/
+
 # Nest.js
 *.js.map
 *.d.ts

@@ -21,26 +21,49 @@ A full-stack application featuring two Nest.js microservices (Product Service an
 
 ## Quick Start
 
-### 1. Product Service
+### Option 1: Run Both Services Together (Recommended)
 
+**Using npm script (cross-platform):**
+```bash
+# Install root dependencies (only needed once)
+npm install
+
+# Start both services concurrently
+npm run start:services
+```
+
+**Using shell script (Linux/Mac):**
+```bash
+./start-services.sh
+```
+
+**Using batch script (Windows):**
+```batch
+start-services.bat
+```
+
+Both services will start and be available at:
+- Product Service: `http://localhost:3001`
+- Product Service API Docs: `http://localhost:3001/api-docs`
+- Order Service: `http://localhost:3002`
+- Order Service API Docs: `http://localhost:3002/api-docs`
+
+### Option 2: Run Services Individually
+
+**1. Product Service:**
 ```bash
 cd product-service
 npm install
-npm run build
 npm run start:dev
 ```
-
 Service runs on: `http://localhost:3001`
 
-### 2. Order Service
-
+**2. Order Service:**
 ```bash
 cd order-service
 npm install
-npm run build
 npm run start:dev
 ```
-
 Service runs on: `http://localhost:3002`
 
 **Note:** Make sure Product Service is running before starting Order Service.
@@ -54,6 +77,13 @@ npm run dev
 ```
 
 Client runs on: `http://localhost:3000`
+
+### Run Everything Together
+
+To start both services and the client:
+```bash
+npm run start:all
+```
 
 ## API Endpoints
 
